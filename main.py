@@ -16,12 +16,7 @@ def main():
 
 
 def calc_deviation(sample):
-    sample_sum = 0
-    for i in range(len(sample)):
-        sample[i] = float(sample[i])
-        sample_sum += sample[i]
-
-    mean = sample_sum / len(sample)
+    mean = calc_mean(sample)
 
     deviation = 0
     for i in range(len(sample)):
