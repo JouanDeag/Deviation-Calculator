@@ -9,11 +9,13 @@ def main():
         for i in range(len(sample)):
             sample[i] = sample[i].replace(",", ".")
 
+            # Remove letters from the sample
+            sample[i] = "".join([i for i in sample[i] if not i.isalpha()])
+
     print(f"Mean: {calc_mean(sample)} \nDeviation: {calc_deviation(sample)}")
 
 
 def calc_deviation(sample):
-    # Calculate the mean
     sample_sum = 0
     for i in range(len(sample)):
         sample[i] = float(sample[i])
